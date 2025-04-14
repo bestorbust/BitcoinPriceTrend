@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitcoin Trend Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px auto;
+            width: 500px;
+            text-align: center;
+        }
+        input[type="date"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bitcoin Trend Predictor</h1>
+    <form method="POST">
+        <input type="date" name="date" required>
+        <br>
+        <input type="submit" value="Predict Trend">
+    </form>
+
+    {% if trend %}
+        <div class="result">
+            <strong>Predicted Trend:</strong> {{ trend }}
+        </div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,90 @@
+{
+    "processed_ds1": [
+        {
+            "model": "LSTM_Model",
+            "val_rmse": 0.07046835390364667,
+            "r2_score": 0.9963538910435855
+        },
+        {
+            "model": "GRU_Model",
+            "val_rmse": 0.06795512060674645,
+            "r2_score": 0.9964984198527392
+        },
+        {
+            "model": "CNN_Model",
+            "val_rmse": 0.09035604719997498,
+            "r2_score": 0.9900903344482516
+        },
+        {
+            "model": "Transformer_Model",
+            "val_rmse": 0.0938887118702851,
+            "r2_score": 0.9902266770792154
+        }
+    ],
+    "processed_ds2": [
+        {
+            "model": "LSTM_Model",
+            "val_rmse": 0.04717024662878205,
+            "r2_score": 0.9962509020072434
+        },
+        {
+            "model": "GRU_Model",
+            "val_rmse": 0.04906064685081513,
+            "r2_score": 0.9959515395637292
+        },
+        {
+            "model": "CNN_Model",
+            "val_rmse": 0.08820844446634217,
+            "r2_score": 0.9923444901461955
+        },
+        {
+            "model": "Transformer_Model",
+            "val_rmse": 0.0960365609606668,
+            "r2_score": 0.9899925836869016
+        }
+    ],
+    "processed_ds3": [
+        {
+            "model": "LSTM_Model",
+            "val_rmse": 0.06763520940447314,
+            "r2_score": 0.9960549680008219
+        },
+        {
+            "model": "GRU_Model",
+            "val_rmse": 0.0658101747333619,
+            "r2_score": 0.9960755515072489
+        },
+        {
+            "model": "CNN_Model",
+            "val_rmse": 0.08208687390755863,
+            "r2_score": 0.9895225105562485
+        },
+        {
+            "model": "Transformer_Model",
+            "val_rmse": 0.09060154402979784,
+            "r2_score": 0.9907668691630468
+        }
+    ],
+    "processed_ds4": [
+        {
+            "model": "LSTM_Model",
+            "val_rmse": 0.040426602030273255,
+            "r2_score": 0.9980509808676848
+        },
+        {
+            "model": "GRU_Model",
+            "val_rmse": 0.04371223744850536,
+            "r2_score": 0.9978036001610283
+        },
+        {
+            "model": "CNN_Model",
+            "val_rmse": 0.056657647062156063,
+            "r2_score": 0.996112943878196
+        },
+        {
+            "model": "Transformer_Model",
+            "val_rmse": 0.0746852615935993,
+            "r2_score": 0.9952358815508136
+        }
+    ]
+}
