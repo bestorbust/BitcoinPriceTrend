@@ -41,3 +41,84 @@ This project implements a stock trend prediction system using GRU (Gated Recurre
    ```bash
    git clone https://github.com/yourusername/Stock-Trend-Prediction.git
    cd Stock-Trend-Prediction
+
+2. Install required packages:
+   ```bash
+   pip install -r requirements.txt
+
+Running the Application
+1. Data Preprocessing
+Run the preprocessing pipeline to clean and prepare the raw data:
+
+bash
+Copy
+python train.py --preprocess
+2. Model Training
+Train all models on the processed datasets:
+
+bash
+Copy
+python train.py
+3. Batch Trend Prediction
+Generate trend predictions for historical data:
+
+bash
+Copy
+python trend.py
+4. Web Application
+Start the Flask web app for interactive predictions:
+
+bash
+Copy
+python main.py
+Then visit http://localhost:5000 in your browser.
+
+Usage Examples
+Getting a trend prediction for a specific date:
+
+python
+Copy
+from gru_predict import get_gru_trend_for_date
+
+trend = get_gru_trend_for_date("2025-04-10")
+print(f"Predicted trend: {trend}")
+Training a specific model:
+
+python
+Copy
+from train import create_gru, run_pipeline
+
+# Train GRU model on a specific dataset
+results = run_pipeline("data/processed_ds1.csv")
+Dependencies
+Python 3.8+
+
+TensorFlow 2.x
+
+scikit-learn
+
+pandas
+
+numpy
+
+Flask
+
+joblib
+
+File Structure
+The application expects the following directory structure:
+
+data/: Contains raw and processed datasets
+
+models/: Stores trained model files
+
+scalers/: Contains feature scalers
+
+gru/: Output directory for trend predictions
+
+templates/: Flask HTML templates
+
+License
+This project is licensed under the MIT License.
+
+Copy

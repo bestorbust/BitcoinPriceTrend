@@ -1,0 +1,10 @@
+pycache/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.env
+venv/
+*.h5
+*.pkl
+*.csv
