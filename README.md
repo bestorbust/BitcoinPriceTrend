@@ -1,11 +1,11 @@
 
-# 📈 Stock Trend Prediction with GRU Models
+# Stock Trend Prediction with GRU Models
 
 This project implements a stock trend prediction system using **GRU (Gated Recurrent Unit)** neural networks. It includes data preprocessing, model training, batch prediction evaluation, and a Flask web interface for interactive predictions.
 
 ---
 
-## 📂 File Descriptions
+## File Descriptions
 
 ### `gru_predict.py`
 - **Purpose**: Main prediction module using trained GRU models.
@@ -39,7 +39,7 @@ This project implements a stock trend prediction system using **GRU (Gated Recur
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 ```bash
@@ -54,7 +54,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Running the Application
+## Running the Application
 
 ### 1. Data Preprocessing
 ```bash
@@ -80,7 +80,7 @@ Then open your browser and go to:
 
 ---
 
-## 🧪 Usage Examples
+## Usage Examples
 
 ### Predicting Trend for a Specific Date
 ```python
