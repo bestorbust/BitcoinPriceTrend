@@ -99,7 +99,7 @@ results = run_pipeline("data/processed_ds1.csv")
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Stock-Trend-Prediction/
@@ -118,7 +118,7 @@ Stock-Trend-Prediction/
 
 ---
 
-## 📌 Dependencies
+## Dependencies
 
 - Python 3.8+
 - TensorFlow 2.x
@@ -130,6 +130,6 @@ Stock-Trend-Prediction/
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
