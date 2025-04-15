@@ -1,45 +1,47 @@
+#  Stock Trend Prediction with GRU Models
 
-# Stock Trend Prediction with GRU Models
-
-This project implements a stock trend prediction system using **GRU (Gated Recurrent Unit)** neural networks. It includes data preprocessing, model training, batch prediction evaluation, and a Flask web interface for interactive predictions.
-
----
-
-## File Descriptions
-
-### `gru_predict.py`
-- **Purpose**: Main prediction module using trained GRU models.
-- **Key Functions**:
-  - `load_model_and_scalers()` – Loads GRU model and feature scalers.
-  - `preprocess_input_data()` – Processes data into model-ready format.
-  - `predict_trend()` – Predicts trend based on input sequence.
-  - `get_gru_trend_for_date(date_str)` – Returns trend for a given date.
-
-### `main.py`
-- **Purpose**: Flask-based web interface for predictions.
-- **Features**:
-  - `/` endpoint handles both `GET` and `POST`.
-  - Accepts date input and displays predicted trend.
-  - Uses GRU model via `gru_predict.py`.
-
-### `train.py`
-- **Purpose**: Training pipeline for deep learning models.
-- **Features**:
-  - Cleans and preprocesses input stock data.
-  - Performs feature engineering.
-  - Trains LSTM, GRU, CNN, and Transformer models.
-  - Saves best-performing model and its scaler.
-
-### `trend.py`
-- **Purpose**: Batch trend prediction for historical analysis.
-- **Features**:
-  - Loads datasets in bulk.
-  - Runs predictions over time-series windows.
-  - Saves per-dataset and overall trend summaries.
+Welcome to the Stock Trend Prediction repository! This repository provides a full-stack implementation of a stock trend prediction system using deep learning, specifically **GRU (Gated Recurrent Unit)** neural networks. The system includes data preprocessing, model training (GRU, LSTM, CNN, Transformer), batch prediction, and a web-based prediction interface using Flask.
 
 ---
 
-## Setup Instructions
+## 📚 Table of Contents
+
+- [Introduction](#introduction)
+- [Project Description](#project-description)
+- [Setup Instructions](#setup-instructions)
+- [Running the Application](#running-the-application)
+- [Usage Examples](#usage-examples)
+- [File Structure](#file-structure)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+##  Introduction
+
+Stock market prediction involves forecasting the future trends of stock prices. Due to the highly dynamic and non-linear nature of the stock market, traditional models often fail to provide accurate predictions. This project leverages the strength of **Recurrent Neural Networks (RNNs)**, particularly **GRU**, which is well-suited for sequential data like time-series stock data.
+
+This repository is a complete solution that:
+- Preprocesses stock data from multiple financial platforms
+- Trains and evaluates deep learning models
+- Provides trend predictions via a web application
+- Supports historical batch predictions and real-time forecast
+
+---
+
+## 📋 Project Description
+
+This project includes the following key modules:
+
+- **Data Preprocessing**: Cleans raw data, handles missing values, and performs feature engineering (Daily %, VWAP, Turnover, etc.).
+- **Model Training**: Supports GRU, LSTM, CNN, Transformer architectures with early stopping and RMSE evaluation.
+- **Batch Prediction**: Predicts stock trends across full datasets and outputs summarized results.
+- **Flask Web App**: Lightweight interface for trend prediction based on a user-input date.
+
+---
+
+##  Setup Instructions
 
 ### 1. Clone the Repository
 ```bash
@@ -54,7 +56,7 @@ pip install -r requirements.txt
 
 ---
 
-## Running the Application
+##  Running the Application
 
 ### 1. Data Preprocessing
 ```bash
@@ -75,12 +77,11 @@ python trend.py
 ```bash
 python main.py
 ```
-Then open your browser and go to:  
-[http://localhost:5000](http://localhost:5000)
+Open [http://localhost:5000](http://localhost:5000) in your browser to use the web interface.
 
 ---
 
-## Usage Examples
+##  Usage Examples
 
 ### Predicting Trend for a Specific Date
 ```python
@@ -99,26 +100,26 @@ results = run_pipeline("data/processed_ds1.csv")
 
 ---
 
-## Project Structure
+##  File Structure
 
 ```
 Stock-Trend-Prediction/
-│
-├── data/           # Raw and processed datasets
-├── models/         # Saved trained models
-├── scalers/        # Feature scalers (StandardScaler)
-├── gru/            # Output directory for trend predictions
-├── templates/      # Flask HTML templates
-├── train.py        # Model training pipeline
-├── trend.py        # Batch prediction
-├── gru_predict.py  # Model inference module
-├── main.py         # Flask app
-└── requirements.txt
+├── data/               # Raw and processed stock datasets
+├── models/             # Trained model files (.h5)
+├── scalers/            # Feature scaler files
+├── gru/                # Output predictions and trend results
+├── templates/          # HTML templates for Flask web app
+├── train.py            # Training pipeline
+├── trend.py            # Historical batch prediction
+├── gru_predict.py      # Prediction module
+├── main.py             # Flask server
+├── requirements.txt    # Python dependencies
+└── README.md           # Documentation
 ```
 
 ---
 
-## Dependencies
+##  Dependencies
 
 - Python 3.8+
 - TensorFlow 2.x
@@ -128,8 +129,27 @@ Stock-Trend-Prediction/
 - Flask
 - joblib
 
+Install them with:
+```bash
+pip install -r requirements.txt
+```
+
 ---
 
-## License
+##  Contributing
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+Contributions are welcome! If you'd like to improve the labs, add your own examples, or correct any mistakes, please follow these steps:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes with meaningful messages.
+4. Test your changes thoroughly.
+5. Submit a pull request.
+
+Your contributions will enhance this project and help others in the open-source community.
+
+---
+
+##  License
+
+This project is open-source and licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and share this project under the terms of the license.
